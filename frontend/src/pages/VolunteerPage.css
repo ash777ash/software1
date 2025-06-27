@@ -1,0 +1,200 @@
+/* Main container */
+.volunteer-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 150px);
+}
+
+/* Page title */
+.volunteer-page h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+/* Volunteer list grid */
+.volunteer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Individual volunteer cards */
+.volunteer-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.volunteer-card h3 {
+  color: #2196F3;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.volunteer-card p {
+  color: #555;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* Empty state */
+.volunteer-list-empty {
+  text-align: center;
+  color: #777;
+  padding: 2rem;
+  grid-column: 1 / -1;
+}
+
+/* Volunteer form */
+.volunteer-form {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.volunteer-form h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #0b7dda;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Login prompt */
+.login-prompt {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.login-link {
+  color: #2196F3;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.login-link:hover {
+  color: #0b7dda;
+  text-decoration: underline;
+}
+
+/* Loading and error states */
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.loading {
+  color: #2196F3;
+}
+
+.error {
+  color: #e53935;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .volunteer-page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .volunteer-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .volunteer-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .volunteer-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .volunteer-form {
+    padding: 1.2rem;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.7rem;
+  }
+}
